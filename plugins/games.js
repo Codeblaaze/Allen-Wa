@@ -29,6 +29,8 @@ smd({
 *Name:* ${name}
 *Estimated Age:* ${age}
 *Count:* ${count}
+
+Powered by ~ agify.io
       `;
     await message.send(output);
   } catch (error) {
