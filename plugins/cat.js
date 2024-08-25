@@ -10,9 +10,9 @@ smd(
   async (m) => {
     try {
       await m.send(
-        "https://cataas.com/gif",
+        "https://api.thecatapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=1",
         { caption: "*meoooow!*" },
-        "gif",
+        "img",
         m
       );
     } catch (e) {
