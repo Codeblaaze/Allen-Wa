@@ -1,6 +1,6 @@
 const { smd, sleep } = require('../lib');
 
-smd({ cmdname: "premium", type: "misc", info: "hacking prank", filename: __filename }, async (citel) => {
+smd({ cmdname: "premium", type: "misc", info: "Premuim unlock for Beauty Ai Users", filename: __filename }, async (citel) => {
   const messages = [
 "Just a second, BYTE is starting",
     "BYTE started successfully!",

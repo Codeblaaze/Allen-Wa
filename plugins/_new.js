@@ -14,7 +14,7 @@ let {
  smd(
   {
     pattern: "website",
-    desc: "To check ping",
+    desc: "Website of Beauty Ai",
     react: "🌐",
     category: "user",
     filename: __filename,
@@ -33,7 +33,7 @@ let {
 smd(
   {
     pattern: "beautyai",
-    desc: "TO GET SUPPORT NUMBER OF Hamza",
+    desc: "Beauty Ai Bot link",
     react: "🌐",
     category: "user",
     filename: __filename,

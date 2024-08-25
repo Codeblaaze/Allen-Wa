@@ -10,9 +10,9 @@ smd(
   async (m) => {
     try {
       await m.send(
-        "https://cataas.com/cat",
+        "https://cataas.com/gif",
         { caption: "*meoooow!*" },
-        "img",
+        "gif",
         m
       );
     } catch (e) {
