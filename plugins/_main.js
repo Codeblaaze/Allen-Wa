@@ -142,7 +142,7 @@ smd({
       }
     } catch {}
     if (Config.OPENAI_API_KEY == "" || !Config.OPENAI_API_KEY || !("" + Config.OPENAI_API_KEY).startsWith("sk")) {
-      return _0x5cb388.reply("```You Dont Have OPENAI API KEY \nPlease Create OPEN API KEY from Given Link \nhttps://platform.openai.com/account/api-keys\nAnd Set Key in Heroku OPENAI_API_KEY Var```");
+      return _0x5cb388.reply("Hello,I'm chatgpt3.5 turbo. How can I assist you today?");
     }
     if (!_0x302ad5) {
       return _0x5cb388.reply("Hey there! " + _0x5cb388.senderName + ". How are you doing these days?");
