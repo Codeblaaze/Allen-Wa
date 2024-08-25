@@ -3,7 +3,6 @@ const { smd } = require("../lib");
 smd(
   {
     cmdname: "cat",
-    react: "🐱"
     desc: "Send Images of randome Cats!",
     type: "misc",
     filename: __filename,
@@ -11,7 +10,7 @@ smd(
   async (m) => {
     try {
       await m.send(
-        "https://cataas.com/cat?position=center",
+        "https://cataas.com/cat",
         { caption: "*meoooow!*" },
         "img",
         m
