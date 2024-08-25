@@ -261,7 +261,7 @@ smd({
     if (!_0x1b0897) {
       return _0x42b3b8.reply("Hey, I'm Liama, Ask me any Question! How can I help you today?");
     }
-    const _0x4c275e = await fetch("https://widipe.com/turbo?text=" + _0x1b0897);
+    const _0x4c275e = await fetch("https://widipe.com/blackbox?text=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
