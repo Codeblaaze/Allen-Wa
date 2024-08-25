@@ -201,7 +201,7 @@ smd({
   }
 });
 smd({
-  pattern: "chats",
+  pattern: "chatsin",
   react:"🔆",
   desc: "Chat with Allen Bot in Sinhala",
   category: "ai",
