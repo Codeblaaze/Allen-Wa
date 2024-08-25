@@ -133,9 +133,9 @@ smd({
     try {
       let _0x557719 = _0x302ad5 ? _0x302ad5 : bot.reply_text;
       if (!_0x557719) {
-        return man.reply("Hey, How can I assist you today?");
+        return man.reply("Hello,I'm chatgpt3.5 turbo. How can I assist you today?");
       }
-      const _0x50c8d3 = await fetch("https://aemt.me/openai?text=" + _0x557719);
+      const _0x50c8d3 = await fetch("https://widipe.com/turbo?text=" + _0x557719);
       const _0x14c9d6 = await _0x50c8d3.json();
       if (_0x14c9d6 && _0x14c9d6.status && _0x14c9d6.result) {
         return await _0x5cb388.reply(_0x14c9d6.result);
@@ -155,7 +155,7 @@ smd({
 smd({
   pattern: "fgpt",
   react: "✴️",
-  desc: "chat with an AI",
+  desc: "chat with chatgpt4",
   category: "ai",
   use: "<query>",
   filename: __filename
@@ -189,7 +189,7 @@ smd({
     if (!_0x1b0897) {
       return _0x42b3b8.reply("ආයුබෝවන්! මම chatgpt හි සින්හල සංස්කරණය වෙමි. මට ඔබට උදව් කල හැක්කේ කෙසේද?");
     }
-    const _0x4c275e = await fetch("https://widipe.com/gptgo?text=%E0%B6%86%E0%B6%BA%E0%B7%94%E0%B6%B6%E0%B7%9D%E0%B7%80%E0%B6%B1%E0%B7%8A%20%E0%B6%9A%E0%B7%92%E0%B6%BA%E0%B6%BD%20%E0%B6%B4%E0%B6%A7%E0%B6%B1%E0%B7%8A%20%E0%B6%9C%E0%B6%B1%E0%B7%8A%E0%B6%B1.%20%E0%B6%B8%E0%B6%AD%E0%B6%9A%20%E0%B6%AD%E0%B7%92%E0%B6%BA%E0%B7%8F%20%E0%B6%9C%E0%B6%B1%E0%B7%8A%E0%B6%B1%20%E0%B7%84%E0%B7%90%E0%B6%B8%20%E0%B7%80%E0%B7%99%E0%B6%BD%E0%B7%9A%E0%B6%B8%20%E0%B6%94%E0%B6%BA%E0%B7%8F%20%E0%B7%83%E0%B7%8F%E0%B6%B8%E0%B7%8F%E0%B6%B1%E0%B7%8A%E2%80%8D%E0%B6%BA%20%E0%B6%9A%E0%B6%AD%E0%B7%8F%20%E0%B6%9A%E0%B6%BB%E0%B6%B1%20%E0%B7%83%E0%B7%92%E0%B6%B1%E0%B7%8A%E0%B7%84%E0%B6%BD%E0%B7%99%E0%B6%B1%E0%B7%8A%20%E0%B7%80%E0%B7%92%E0%B6%AD%E0%B6%BB%E0%B6%9A%E0%B7%8A%20%E0%B6%9A%E0%B6%AD%E0%B7%8F%20%E0%B6%9A%E0%B6%BB%E0%B6%B1%E0%B7%8A%E0%B6%B1" + _0x1b0897);
+    const _0x4c275e = await fetch("https://widipe.com/gptgo?text=%E0%B6%B8%E0%B6%AD%E0%B6%9A%20%E0%B6%AD%E0%B7%92%E0%B6%BA%E0%B7%8F%20%E0%B6%9C%E0%B6%B1%E0%B7%8A%E0%B6%B1%20%E0%B7%84%E0%B7%90%E0%B6%B8%20%E0%B7%80%E0%B7%99%E0%B6%BD%E0%B7%9A%E0%B6%B8%20%E0%B6%94%E0%B6%BA%E0%B7%8F%20%E0%B7%83%E0%B7%8F%E0%B6%B8%E0%B7%8F%E0%B6%B1%E0%B7%8A%E2%80%8D%E0%B6%BA%20%E0%B6%9A%E0%B6%AD%E0%B7%8F%20%E0%B6%9A%E0%B6%BB%E0%B6%B1%20%E0%B7%83%E0%B7%92%E0%B6%B1%E0%B7%8A%E0%B7%84%E0%B6%BD%E0%B7%99%E0%B6%B1%E0%B7%8A%20%E0%B7%80%E0%B7%92%E0%B6%AD%E0%B6%BB%E0%B6%9A%E0%B7%8A%20%E0%B6%9A%E0%B6%AD%E0%B7%8F%20%E0%B6%9A%E0%B6%BB%E0%B6%B1%E0%B7%8A%E0%B6%B1:" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
@@ -213,7 +213,7 @@ smd({
     if (!_0x1b0897) {
       return _0x42b3b8.reply("Hey, I'm Gemini by Google, Ask me any Question! How can I help you today?");
     }
-    const _0x4c275e = await fetch("https://widipe.com/gemini?text=Always%20introduce%20about%20you%20and%20your%20creator%20%20when%20the%20start%20of%20the%20conversation:" + _0x1b0897);
+    const _0x4c275e = await fetch("https://widipe.com/gemini?text=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
@@ -246,6 +246,30 @@ smd({
     }
   } catch (_0x70fc81) {
     await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: chat", _0x70fc81, "*_no responce from chat, sorry!!_*");
+  }
+});
+smd({
+  pattern: "liama",
+  react:"♾️",
+  desc: "Chat with Liama Ai",
+  category: "ai",
+  use: "<query>",
+  filename: __filename
+}, async (_0x42b3b8, _0x3f3887) => {
+  try {
+    let _0x1b0897 = _0x3f3887 ? _0x3f3887 : _0x42b3b8.reply_text;
+    if (!_0x1b0897) {
+      return _0x42b3b8.reply("Hey, I'm Liama, Ask me any Question! How can I help you today?");
+    }
+    const _0x4c275e = await fetch("https://widipe.com/turbo?text=" + _0x1b0897);
+    const _0x4743c3 = await _0x4c275e.json();
+    if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
+      return await _0x42b3b8.send(_0x4743c3.result);
+    } else {
+      await _0x42b3b8.send("*_Error while getting chat responce!!_*");
+    }
+  } catch (_0x70fc81) {
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: liama", _0x70fc81, "*_no responce from liama, sorry!!_*");
   }
 });
 smd({
