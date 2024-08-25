@@ -154,7 +154,7 @@ smd({
 });
 smd({
   pattern: "fgpt",
-  react:"✴️"
+  react: "✴️",
   desc: "chat with an AI",
   category: "ai",
   use: "<query>",
@@ -202,7 +202,7 @@ smd({
 });
 smd({
   pattern: "chatsin",
-  react:"🔆",
+  react: "🔆",
   desc: "Chat with Allen Bot in Sinhala",
   category: "ai",
   use: "<query>",
