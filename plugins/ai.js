@@ -391,7 +391,7 @@ const {
   );
   smd(
     {
-      pattern: "chat",
+      pattern: "chatai",
       desc: "chat with an AI",
       category: "ai",
       use: "<Hii, Astro>",
