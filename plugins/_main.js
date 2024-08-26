@@ -315,7 +315,7 @@ smd({
         image: {
           url: _0x27bd9a
         },
-        caption: "[PROMPT]: ```" + _0x17d498 + " ```  \n " + Config.caption + " "
+        caption: "[DALL-E PROMPT]: ```" + _0x17d498 + " ```  \n " + Config.caption + " "
       });
     } catch (_0x5cee92) {
       console.log("ERROR IN DALLE RESPONCE FROM API GURUGPT\n", _0x5cee92);
@@ -352,7 +352,7 @@ smd({
         image: {
           url: _0x27bd9a
         },
-        caption: "[IMAGINNATION]: ```" + _0x17d498 + " ```  \n " + Config.caption + " "
+        caption: "[Stable Diffusion Ai IMAGINNATION]: ```" + _0x17d498 + " ```  \n " + Config.caption + " "
       });
     } catch (_0x5cee92) {
       console.log("ERROR IN DALLE RESPONCE FROM API GURUGPT\n", _0x5cee92);
@@ -397,7 +397,7 @@ smd({
         image: {
           url: _0x14515f
         },
-        caption: "*[IMAGININATION]:* ```" + _0x5e79d4 + " ```" + (_0x5d0b6a ? "\n\n*[RESPONCE]:* ```" + _0x5d0b6a + "``` \n" : "") + "  \n " + Config.caption + " "
+        caption: "*[Text To Image IMAGININATION]:* ```" + _0x5e79d4 + " ```" + (_0x5d0b6a ? "\n\n*[RESPONCE]:* ```" + _0x5d0b6a + "``` \n" : "") + "  \n " + Config.caption + " "
       });
     } catch (_0x484392) {
       console.log("ERROR IN IMAGINE RESPONCE FROM API GURUGPT\n", _0x484392);
@@ -456,7 +456,7 @@ smd({
         image: {
           url: _0x14515f
         },
-        caption: "*[IMAGININATION]:* ```" + _0x5e79d4 + " ```" + (_0x5d0b6a ? "\n\n*[RESPONCE]:* ```" + _0x5d0b6a + "``` \n" : "") + "  \n " + Config.caption + " "
+        caption: "*[Text To Image IMAGININATION]:* ```" + _0x5e79d4 + " ```" + (_0x5d0b6a ? "\n\n*[RESPONCE]:* ```" + _0x5d0b6a + "``` \n" : "") + "  \n " + Config.caption + " "
       });
     } catch (_0x484392) {
       console.log("ERROR IN IMAGINE RESPONCE FROM API GURUGPT\n", _0x484392);
@@ -501,7 +501,7 @@ smd({
     if (!_0x5e79d4) {
       return await _0x39716c.reply("*Give Me A Query To Get imagination?*");
     }
-    const _0x14515f = "" + encodeURIComponent(_0x5e79d4 + " \nNOTE: Make sure to looks like imagination");
+    const _0x14515f = "https://huggingface.co/prompthero/openjourney-v4" + encodeURIComponent(_0x5e79d4 + " \nNOTE: Make sure to looks like imagination");
     let _0x5d0b6a = false;
     try {
       const _0x37057d = await fetch("" + (_0x5e79d4 + " \nNOTE: Make sure to looks like imagination, make it short and concise, also in english!"));
@@ -515,7 +515,7 @@ smd({
         image: {
           url: _0x14515f
         },
-        caption: "*[IMAGININATION]:* ```" + _0x5e79d4 + " ```" + (_0x5d0b6a ? "\n\n*[RESPONCE]:* ```" + _0x5d0b6a + "``` \n" : "") + "  \n " + Config.caption + " "
+        caption: "*[openjourney-v4 IMAGININATION]:* ```" + _0x5e79d4 + " ```" + (_0x5d0b6a ? "\n\n*[RESPONCE]:* ```" + _0x5d0b6a + "``` \n" : "") + "  \n " + Config.caption + " "
       });
     } catch (_0x484392) {
       console.log("ERROR IN IMAGINE RESPONCE FROM API GURUGPT\n", _0x484392);
@@ -547,6 +547,42 @@ async function Draw(_0x3ab488) {
   const _0x1c59a6 = await _0x54c8a4.arrayBuffer();
   return Buffer.from(_0x1c59a6);
 }
+smd({
+  pattern: "imagine5",
+  alias: ["imagin5"],
+  desc: "text to image",
+  category: "ai",
+  use: "<Hii, Hamza>",
+  filename: __filename
+}, async (_0x21be87, _0x17d498) => {
+  try {
+    if (!_0x17d498) {
+      return await _0x21be87.reply("*Give Me A Query To Get imaginnation*");
+    }
+    const _0x27bd9a = "https://widipe.com/v4/text2img?text=" + encodeURIComponent(_0x17d498);
+    try {
+      return await _0x21be87.bot.sendMessage(_0x21be87.chat, {
+        image: {
+          url: _0x27bd9a
+        },
+        caption: "[Text To image IMAGINNATION]: ```" + _0x17d498 + " ```  \n " + Config.caption + " "
+      });
+    } catch (_0x5cee92) {
+      console.log("ERROR IN DALLE RESPONCE FROM API GURUGPT\n", _0x5cee92);
+    }
+    if (Config.OPENAI_API_KEY == "" || !Config.OPENAI_API_KEY || !("" + Config.OPENAI_API_KEY).startsWith("sk")) {
+      return _0x21be87.reply("```You Dont Have OPENAI API KEY \nPlease Create OPEN API KEY from Given Link \nhttps://platform.openai.com/account/api-keys\nAnd Set Key in Heroku OPENAI_API_KEY Var```");
+    }
+    return await _0x21be87.bot.sendMessage(_0x21be87.chat, {
+      image: {
+        url: await aiResponce(_0x21be87, "dalle", _0x17d498)
+      },
+      caption: "*---Your IMAGINNATION result---*\n" + Config.caption
+    });
+  } catch (_0x25b4b9) {
+    await _0x21be87.error(_0x25b4b9 + "\n\ncommand: imagine5", _0x25b4b9, "*_No responce from Imagine Ai, Sorry!!_*");
+  }
+});
 smd({
   pattern: "rmbg",
   alias: ["removebg"],
