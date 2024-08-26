@@ -491,65 +491,6 @@ async function Draw(_0x3ab488) {
 smd({
   pattern: "imagine4",
   alias: ["imagin4"],
-  desc: "openjourney-v4",
-  category: "ai",
-  use: "<boy walking on street>",
-  filename: __filename
-}, async (_0x39716c, _0xe79cfd) => {
-  try {
-    let _0x5e79d4 = _0xe79cfd || _0x39716c.reply_text;
-    if (!_0x5e79d4) {
-      return await _0x39716c.reply("*Give Me A Query To Get imagination?*");
-    }
-    const _0x14515f = "https://huggingface.co/prompthero/openjourney-v4" + encodeURIComponent(_0x5e79d4 + " \nNOTE: Make sure to looks like imagination");
-    let _0x5d0b6a = false;
-    try {
-      const _0x37057d = await fetch("" + (_0x5e79d4 + " \nNOTE: Make sure to looks like imagination, make it short and concise, also in english!"));
-      const _0x644785 = await _0x37057d.json();
-      _0x5d0b6a = _0x644785 && _0x644785.status && _0x644785.result ? _0x644785.result : "";
-    } catch (_0x3ecac9) {
-      _0x5d0b6a = false;
-    }
-    try {
-      return await _0x39716c.bot.sendMessage(_0x39716c.chat, {
-        image: {
-          url: _0x14515f
-        },
-        caption: "*[openjourney-v4 IMAGININATION]:* ```" + _0x5e79d4 + " ```" + (_0x5d0b6a ? "\n\n*[RESPONCE]:* ```" + _0x5d0b6a + "``` \n" : "") + "  \n " + Config.caption + " "
-      });
-    } catch (_0x484392) {
-      console.log("ERROR IN IMAGINE RESPONCE FROM API GURUGPT\n", _0x484392);
-    }
-    if (Config.OPENAI_API_KEY == "" || !Config.OPENAI_API_KEY || !("" + Config.OPENAI_API_KEY).startsWith("sk")) {
-      return _0x39716c.reply("```You Dont Have OPENAI API KEY \nPlease Create OPEN API KEY from Given Link \nhttps://platform.openai.com/account/api-keys\nAnd Set Key in Heroku OPENAI_API_KEY Var```");
-    }
-    return await _0x39716c.bot.sendMessage(_0x39716c.chat, {
-      image: {
-        url: await aiResponce(_0x39716c, "dalle", _0x5e79d4)
-      },
-      caption: "*---Your DALL-E Result---*\n" + Config.caption
-    });
-  } catch (_0x110b5d) {
-    await _0x39716c.error(_0x110b5d + "\n\ncommand: imagine4", _0x110b5d, "*_No responce from Server side, Sorry!!_*");
-  }
-});
-async function Draw(_0x3ab488) {
-  const _0x54c8a4 = await fetch("https://huggingface.co/prompthero/openjourney-v4", {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-      Authorization: "Bearer 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"
-    },
-    body: JSON.stringify({
-      inputs: _0x3ab488
-    })
-  }).then(_0x5838c2 => _0x5838c2.blob());
-  const _0x1c59a6 = await _0x54c8a4.arrayBuffer();
-  return Buffer.from(_0x1c59a6);
-}
-smd({
-  pattern: "imagine5",
-  alias: ["imagin5"],
   desc: "text to image",
   category: "ai",
   use: "<Hii, Hamza>",
@@ -565,7 +506,7 @@ smd({
         image: {
           url: _0x27bd9a
         },
-        caption: "[Text To image IMAGINNATION]: ```" + _0x17d498 + " ```  \n " + Config.caption + " "
+        caption: "[Text To Image IMAGINNATION]: ```" + _0x17d498 + " ```  \n " + Config.caption + " "
       });
     } catch (_0x5cee92) {
       console.log("ERROR IN DALLE RESPONCE FROM API GURUGPT\n", _0x5cee92);
@@ -580,7 +521,7 @@ smd({
       caption: "*---Your IMAGINNATION result---*\n" + Config.caption
     });
   } catch (_0x25b4b9) {
-    await _0x21be87.error(_0x25b4b9 + "\n\ncommand: imagine5", _0x25b4b9, "*_No responce from Imagine Ai, Sorry!!_*");
+    await _0x21be87.error(_0x25b4b9 + "\n\ncommand: imagine4", _0x25b4b9, "*_No responce from Imagine Ai, Sorry!!_*");
   }
 });
 smd({
