@@ -2,10 +2,9 @@ const { smd, sleep } = require('../lib');
 
 smd({ cmdname: "premium", type: "misc", info: "Premuim unlock for Beauty Ai Users", filename: __filename }, async (citel) => {
   const messages = [
-"Just a second, BYTE is starting",
-    "BYTE started successfully!",
-     "Now!!!!!!",
-    "Injecting Malware",
+"Checking User Key",
+    "Key scanned successfully!",
+     "Updating database...",
     " █ 10%",
     " █ █ 20%",
     " █ █ █ 30%",
@@ -16,18 +15,26 @@ smd({ cmdname: "premium", type: "misc", info: "Premuim unlock for Beauty Ai User
     " █ █ █ █ █ █ █ █ 80%",
     " █ █ █ █ █ █ █ █ █ 90%",
     " █ █ █ █ █ █ █ █ █ █ 100%",
-    "System hyjacking on process.. \n Conecting to Server error to find 404 ",
-    "Device successfully connected... \n Riciving data...",
-    "Data hyjacked from divice 100% completed \n killing all evidence killing all malwares...",
-    " HACKING COMPLETED ",
-    " SENDING LOG DOCUMENTS...",
-    " SUCCESSFULLY SENT DATA AND Connection disconnected",
-    "Sending all Victom details to Ranil",
-    "Looking for Hamza's Number",
-    "Successfully detected hacker's number",
-    "Sending details to Anonymous",
-    "Deleting BACKDOORS",
+    " Updated Successfully",
+    "Congratulations 🎉 Now you are a premium user for this bot",
     "Done"
+  ];
+
+  let editedMessage;
+  for (const message of messages) {
+    editedMessage = await citel.send(editedMessage || message);
+    await sleep(1000);
+    editedMessage = await citel.edit(editedMessage, message);
+  }
+});
+smd({ cmdname: "updatebot", type: "misc", info: "update bot", filename: __filename }, async (citel) => {
+  const messages = [
+"Just a second, Updating Services",
+    "Allen Bot V2 Checking for updates",
+     "Update detected V2.1.0",
+    "Installing update....",
+    "Update Installed Successfully",
+    "Thankyou for using Allen Bot"
   ];
 
   let editedMessage;
