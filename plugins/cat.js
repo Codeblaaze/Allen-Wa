@@ -10,7 +10,7 @@ smd(
   async (m) => {
     try {
       await m.send(
-        "https://api.thecatapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=1",
+        "https://api.thecatapi.com/v1/images/search",
         { caption: "*meoooow!*" },
         "img",
         m

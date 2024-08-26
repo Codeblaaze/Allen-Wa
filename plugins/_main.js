@@ -177,6 +177,30 @@ smd({
   }
 });
 smd({
+  pattern: "fgpt2",
+  react: "✴️",
+  desc: "chat with chatgpt4",
+  category: "ai",
+  use: "<query>",
+  filename: __filename
+}, async (_0x42b3b8, _0x3f3887) => {
+  try {
+    let _0x1b0897 = _0x3f3887 ? _0x3f3887 : _0x42b3b8.reply_text;
+    if (!_0x1b0897) {
+      return _0x42b3b8.reply("Hi i'm chat gpt4. I'm the most powerful version of chatgpt. Ask me any question. for example, _how to make Vanilla Latte?_");
+    }
+    const _0x4c275e = await fetch("https://widipe.com/v2/gpt4?text=" + _0x1b0897);
+    const _0x4743c3 = await _0x4c275e.json();
+    if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
+      return await _0x42b3b8.send(_0x4743c3.result);
+    } else {
+      await _0x42b3b8.send("*_Error while getting gpt responce!!_*");
+    }
+  } catch (_0x70fc81) {
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: fgpt2", _0x70fc81, "*_no responce from chatgpt2, sorry!!_*");
+  }
+});
+smd({
   pattern: "sgpt",
   react: "🔆",
   desc: "Chat with chatgpt in Sinhala",
@@ -284,7 +308,7 @@ smd({
     if (!_0x17d498) {
       return await _0x21be87.reply("*Give Me A Query To Get Dall-E Reponce?*");
     }
-    const _0x27bd9a = "https://gurugpt.cyclic.app/dalle?prompt=" + encodeURIComponent(_0x17d498);
+    const _0x27bd9a = "https://widipe.com/dalle?text=" + encodeURIComponent(_0x17d498);
     try {
       return await _0x21be87.bot.sendMessage(_0x21be87.chat, {
         image: {
@@ -324,7 +348,7 @@ smd({
     }
     let _0x24d5e9 = false;
     try {
-      const _0x156dd7 = await fetch("https://widipe.com/dalle?text=" + (_0x2968fd + " \nNOTE: Make sure to looks like imagination, make it short and concise, also in english!"));
+      const _0x156dd7 = await fetch("https://widipe.com/v2/text2img?text=" + (_0x2968fd + " \nNOTE: Make sure to looks like imagination, make it short and concise, also in english!"));
       const _0x49b22e = await _0x156dd7.json();
       _0x24d5e9 = _0x49b22e && _0x49b22e.status && _0x49b22e.result ? _0x49b22e.result : "";
     } catch (_0xf1623a) {
@@ -367,7 +391,7 @@ smd({
     if (!_0x5e79d4) {
       return await _0x39716c.reply("*Give Me A Query To Get imagination?*");
     }
-    const _0x14515f = "https://widipe.com/dalle?text=" + encodeURIComponent(_0x5e79d4 + " \nNOTE: Make sure to looks like imagination");
+    const _0x14515f = "https://widipe.com/stablediffusion?text=" + encodeURIComponent(_0x5e79d4 + " \nNOTE: Make sure to looks like imagination");
     let _0x5d0b6a = false;
     try {
       const _0x37057d = await fetch("https://aemt.me/openai?text=" + (_0x5e79d4 + " \nNOTE: Make sure to looks like imagination, make it short and concise, also in english!"));
@@ -741,7 +765,7 @@ smd({
       _0x3079e2.reciever = _0x48975a[0];
       _0x3079e2.msgStatus = true;
       _0x3079e2.senderMsg = _0x358984;
-      _0x5f656f = "*BYTE-MD• ᴀɴɴᴏɴʏᴍᴏᴜs ᴍsɢ*\n\n*Msg_Id:* " + _0x3079e2.id + "\n*Date:* _" + _0xbcd286 + "_\n*Time:* _" + _0x47ad13 + "_\n\n*Message:* " + _0x5f656f + "\n\n\n" + Config.caption;
+      _0x5f656f = "*Allen Bot V2• ᴀɴɴᴏɴʏᴍᴏᴜs ᴍsɢ*\n\n*Msg_Id:* " + _0x3079e2.id + "\n*Date:* _" + _0xbcd286 + "_\n*Time:* _" + _0x47ad13 + "_\n\n*Message:* " + _0x5f656f + "\n\n\n" + Config.caption;
       isAnnonyMsgAlive = isAnnonyMsgAlive + "," + _0x3079e2.reciever;
       await _0x358984.bot.sendMessage(_0x3079e2.reciever, {
         text: _0x5f656f
@@ -763,7 +787,7 @@ smd({
       if (_0x2dfb59.length < 3) {
         return;
       }
-      if (_0x2acf30.reply_text.includes("BYTE-MD• ᴀɴɴᴏɴʏᴍᴏᴜs ᴍsɢ") && _0x2dfb59[0].includes("BYTE-MD• ᴀɴɴᴏɴʏᴍᴏᴜs ᴍsɢ") && _0x2dfb59[2].includes("Msg_Id")) {
+      if (_0x2acf30.reply_text.includes("Allen Bot V2• ᴀɴɴᴏɴʏᴍᴏᴜs ᴍsɢ") && _0x2dfb59[0].includes("Allen Bot V2• ᴀɴɴᴏɴʏᴍᴏᴜs ᴍsɢ") && _0x2dfb59[2].includes("Msg_Id")) {
         let _0x1b0d01 = "" + _0x2dfb59[2].replace("*Msg_Id:* ", "").trim();
         let _0x2ecd2a = astro_patch_AnonyMsg[_0x1b0d01];
         if (!_0x2ecd2a) {
@@ -775,7 +799,7 @@ smd({
             if (_0x13a11c.toLowerCase().startsWith("reply")) {
               _0x2ecd2a.howmanyreply += 1;
               const _0x5a2204 = _0x2acf30.text.indexOf(",");
-              let _0x3f6b59 = "*BYTE-MD• ʏᴏᴜʀ ᴀɴᴏɴʏ-ᴍsɢ ʀᴇᴘʟʏ*\n\n*_From @" + _0x2ecd2a.reciever.split("@")[0] + "_*\n*_Msg_Id: " + _0x2ecd2a.id + "_*\n\n*Message:* " + _0x2acf30.text.slice(_0x5a2204 + 1).trim() + "\n\n\n\n" + Config.caption;
+              let _0x3f6b59 = "*Allen Bot V2• ʏᴏᴜʀ ᴀɴᴏɴʏ-ᴍsɢ ʀᴇᴘʟʏ*\n\n*_From @" + _0x2ecd2a.reciever.split("@")[0] + "_*\n*_Msg_Id: " + _0x2ecd2a.id + "_*\n\n*Message:* " + _0x2acf30.text.slice(_0x5a2204 + 1).trim() + "\n\n\n\n" + Config.caption;
               if (_0x2ecd2a.howmanyreply >= 2) {
                 isAnnonyMsgAlive = isAnnonyMsgAlive.replace("," + _0x2acf30.sender, "");
               }

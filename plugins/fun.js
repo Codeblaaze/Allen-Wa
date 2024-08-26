@@ -62,6 +62,122 @@ smd(
     }
   }
 );
+smd(
+  {
+    pattern: "lulcat",
+    desc: "translate your text into cat language",
+    category: "fun",
+    filename: __filename,
+  },
+  async (m) => {
+    try {
+      const apiUrl = "https://api.popcat.xyz/lulcat?text=";
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        return await m.send(
+          `*_Error: ${response.status} ${response.statusText}_*`
+        );
+      }
+
+      const data = await response.json();
+      const { pickupline, contributor } = data;
+
+      const message = `${pickupline}`;
+
+      await m.send(message);
+    } catch (e) {
+      await m.error(`${e}\n\ncommand: lulcat`, e);
+    }
+  }
+);
+smd(
+  {
+    pattern: "stquote",
+    desc: "sranger things quote",
+    category: "fun",
+    filename: __filename,
+  },
+  async (m) => {
+    try {
+      const apiUrl = "https://strangerthings-quotes.vercel.app/api/quotes";
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        return await m.send(
+          `*_Error: ${response.status} ${response.statusText}_*`
+        );
+      }
+
+      const data = await response.json();
+      const { pickupline, contributor } = data;
+
+      const message = `${pickupline}`;
+
+      await m.send(message);
+    } catch (e) {
+      await m.error(`${e}\n\ncommand: stquote`, e);
+    }
+  }
+);
+smd(
+  {
+    pattern: "clown",
+    desc: "clown.image",
+    category: "fun",
+    filename: __filename,
+  },
+  async (m) => {
+    try {
+      const apiUrl = "https://api.popcat.xyz/clown?image=https://cdn.popcat.xyz/avatar.png";
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        return await m.send(
+          `*_Error: ${response.status} ${response.statusText}_*`
+        );
+      }
+
+      const data = await response.json();
+      const { pickupline, contributor } = data;
+
+      const message = `${pickupline}`;
+
+      await m.send(message);
+    } catch (e) {
+      await m.error(`${e}\n\ncommand: clown`, e);
+    }
+  }
+);
+smd(
+  {
+    pattern: "chatbot",
+    desc: "chat with a chatbot",
+    category: "fun",
+    filename: __filename,
+  },
+  async (m) => {
+    try {
+      const apiUrl = "https://api.popcat.xyz/chatbot?msg=who+made+you&owner=Allen+Bot&botname=Allen+Bot";
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        return await m.send(
+          `*_Error: ${response.status} ${response.statusText}_*`
+        );
+      }
+
+      const data = await response.json();
+      const { pickupline, contributor } = data;
+
+      const message = `${pickupline}`;
+
+      await m.send(message);
+    } catch (e) {
+      await m.error(`${e}\n\ncommand: chatbot`, e);
+    }
+  }
+);
 smd({
   cmdname: "question",
   info: "Random Question.",
