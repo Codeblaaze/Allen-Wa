@@ -7,7 +7,7 @@ const {
 } = require('../lib')
 smd(
   {
-    pattern: 'apk2 ?(.*)',
+    pattern: 'apk2',
     desc: 'Download apk from apkmirror',
     category: 'misc',
   },
