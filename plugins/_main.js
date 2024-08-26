@@ -298,6 +298,7 @@ smd({
 });
 smd({
   pattern: "dalle",
+  react: "🖼️",
   alias: ["dall", "dall-e"],
   desc: "chat with an AI",
   category: "ai",
@@ -336,52 +337,43 @@ smd({
   pattern: "imagine",
   react: "✨",
   alias: ["imagin"],
-  desc: "chat with an AI",
+  desc: "stablediffusion ai",
   category: "ai",
-  use: "<boy walking on street>",
+  use: "<Hii, Hamza>",
   filename: __filename
-}, async (_0x9bac01, _0x3700d4) => {
+}, async (_0x21be87, _0x17d498) => {
   try {
-    let _0x2968fd = _0x3700d4 || _0x9bac01.reply_text;
-    if (!_0x2968fd) {
-      return await _0x9bac01.reply("*Give Me A Query To Get imagination?*");
+    if (!_0x17d498) {
+      return await _0x21be87.reply("*Give Me A Query To Get imaginnation*");
     }
-    let _0x24d5e9 = false;
+    const _0x27bd9a = "https://widipe.com/stablediffusion?text=" + encodeURIComponent(_0x17d498);
     try {
-      const _0x156dd7 = await fetch("https://widipe.com/v2/text2img?text=" + (_0x2968fd + " \nNOTE: Make sure to looks like imagination, make it short and concise, also in english!"));
-      const _0x49b22e = await _0x156dd7.json();
-      _0x24d5e9 = _0x49b22e && _0x49b22e.status && _0x49b22e.result ? _0x49b22e.result : "";
-    } catch (_0xf1623a) {
-      _0x24d5e9 = false;
-    }
-    try {
-      await Draw(_0x2968fd || _0x9bac01.reply_text).then(_0x1f03a3 => {
-        _0x9bac01.bot.sendMessage(_0x9bac01.chat, {
-          image: _0x1f03a3,
-          caption: "*[IMAGININATION]:* ```" + _0x2968fd + " ```" + (_0x24d5e9 ? "\n\n*[RESPONCE]:* ```" + _0x24d5e9 + "``` \n" : "") + "  \n " + Config.caption + " "
-        });
+      return await _0x21be87.bot.sendMessage(_0x21be87.chat, {
+        image: {
+          url: _0x27bd9a
+        },
+        caption: "[IMAGINNATION]: ```" + _0x17d498 + " ```  \n " + Config.caption + " "
       });
-      return;
-    } catch (_0x45726b) {
-      console.log("ERROR IN IMAGINE RESPONCE FROM IMAGINE API n", _0x45726b);
+    } catch (_0x5cee92) {
+      console.log("ERROR IN DALLE RESPONCE FROM API GURUGPT\n", _0x5cee92);
     }
     if (Config.OPENAI_API_KEY == "" || !Config.OPENAI_API_KEY || !("" + Config.OPENAI_API_KEY).startsWith("sk")) {
-      return _0x9bac01.reply("```You Dont Have OPENAI API KEY \nPlease Create OPEN API KEY from Given Link \nhttps://platform.openai.com/account/api-keys\nAnd Set Key in Heroku OPENAI_API_KEY Var```");
+      return _0x21be87.reply("```You Dont Have OPENAI API KEY \nPlease Create OPEN API KEY from Given Link \nhttps://platform.openai.com/account/api-keys\nAnd Set Key in Heroku OPENAI_API_KEY Var```");
     }
-    return await _0x9bac01.bot.sendMessage(_0x9bac01.chat, {
+    return await _0x21be87.bot.sendMessage(_0x21be87.chat, {
       image: {
-        url: await aiResponce(_0x9bac01, "dalle", _0x2968fd)
+        url: await aiResponce(_0x21be87, "dalle", _0x17d498)
       },
-      caption: "*---Your DALL-E Result---*\n" + Config.caption
+      caption: "*---Your IMAGINNATION result---*\n" + Config.caption
     });
-  } catch (_0x5d8080) {
-    await _0x9bac01.error(_0x5d8080 + "\n\ncommand: imagine", _0x5d8080, "*_No responce from Server side, Sorry!!_*");
+  } catch (_0x25b4b9) {
+    await _0x21be87.error(_0x25b4b9 + "\n\ncommand: imagine", _0x25b4b9, "*_No responce from Imagine Ai, Sorry!!_*");
   }
 });
 smd({
   pattern: "imagine2",
   alias: ["imagin2"],
-  desc: "chat with an AI",
+  desc: "Stable diffusion Ai",
   category: "ai",
   use: "<boy walking on street>",
   filename: __filename
@@ -391,7 +383,7 @@ smd({
     if (!_0x5e79d4) {
       return await _0x39716c.reply("*Give Me A Query To Get imagination?*");
     }
-    const _0x14515f = "https://widipe.com/stablediffusion?text=" + encodeURIComponent(_0x5e79d4 + " \nNOTE: Make sure to looks like imagination");
+    const _0x14515f = "https://widipe.com/ai/text2img?text=" + encodeURIComponent(_0x5e79d4 + " \nNOTE: Make sure to looks like imagination");
     let _0x5d0b6a = false;
     try {
       const _0x37057d = await fetch("https://aemt.me/openai?text=" + (_0x5e79d4 + " \nNOTE: Make sure to looks like imagination, make it short and concise, also in english!"));
@@ -420,11 +412,129 @@ smd({
       caption: "*---Your DALL-E Result---*\n" + Config.caption
     });
   } catch (_0x110b5d) {
-    await _0x39716c.error(_0x110b5d + "\n\ncommand: imagine", _0x110b5d, "*_No responce from Server side, Sorry!!_*");
+    await _0x39716c.error(_0x110b5d + "\n\ncommand: imagine2", _0x110b5d, "*_No responce from Server side, Sorry!!_*");
   }
 });
 async function Draw(_0x3ab488) {
   const _0x54c8a4 = await fetch("https://api-inference.huggingface.co/models/prompthero/openjourney-v2", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer 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"
+    },
+    body: JSON.stringify({
+      inputs: _0x3ab488
+    })
+  }).then(_0x5838c2 => _0x5838c2.blob());
+  const _0x1c59a6 = await _0x54c8a4.arrayBuffer();
+  return Buffer.from(_0x1c59a6);
+}
+smd({
+  pattern: "imagine3",
+  alias: ["imagin3"],
+  desc: "Stable diffusion Ai",
+  category: "ai",
+  use: "<boy walking on street>",
+  filename: __filename
+}, async (_0x39716c, _0xe79cfd) => {
+  try {
+    let _0x5e79d4 = _0xe79cfd || _0x39716c.reply_text;
+    if (!_0x5e79d4) {
+      return await _0x39716c.reply("*Give Me A Query To Get imagination?*");
+    }
+    const _0x14515f = "https://widipe.com/v6/text2img?text=" + encodeURIComponent(_0x5e79d4 + " \nNOTE: Make sure to looks like imagination");
+    let _0x5d0b6a = false;
+    try {
+      const _0x37057d = await fetch("https://aemt.me/openai?text=" + (_0x5e79d4 + " \nNOTE: Make sure to looks like imagination, make it short and concise, also in english!"));
+      const _0x644785 = await _0x37057d.json();
+      _0x5d0b6a = _0x644785 && _0x644785.status && _0x644785.result ? _0x644785.result : "";
+    } catch (_0x3ecac9) {
+      _0x5d0b6a = false;
+    }
+    try {
+      return await _0x39716c.bot.sendMessage(_0x39716c.chat, {
+        image: {
+          url: _0x14515f
+        },
+        caption: "*[IMAGININATION]:* ```" + _0x5e79d4 + " ```" + (_0x5d0b6a ? "\n\n*[RESPONCE]:* ```" + _0x5d0b6a + "``` \n" : "") + "  \n " + Config.caption + " "
+      });
+    } catch (_0x484392) {
+      console.log("ERROR IN IMAGINE RESPONCE FROM API GURUGPT\n", _0x484392);
+    }
+    if (Config.OPENAI_API_KEY == "" || !Config.OPENAI_API_KEY || !("" + Config.OPENAI_API_KEY).startsWith("sk")) {
+      return _0x39716c.reply("```You Dont Have OPENAI API KEY \nPlease Create OPEN API KEY from Given Link \nhttps://platform.openai.com/account/api-keys\nAnd Set Key in Heroku OPENAI_API_KEY Var```");
+    }
+    return await _0x39716c.bot.sendMessage(_0x39716c.chat, {
+      image: {
+        url: await aiResponce(_0x39716c, "dalle", _0x5e79d4)
+      },
+      caption: "*---Your DALL-E Result---*\n" + Config.caption
+    });
+  } catch (_0x110b5d) {
+    await _0x39716c.error(_0x110b5d + "\n\ncommand: imagine3", _0x110b5d, "*_No responce from Server side, Sorry!!_*");
+  }
+});
+async function Draw(_0x3ab488) {
+  const _0x54c8a4 = await fetch("https://api-inference.huggingface.co/models/prompthero/openjourney-v2", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer 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"
+    },
+    body: JSON.stringify({
+      inputs: _0x3ab488
+    })
+  }).then(_0x5838c2 => _0x5838c2.blob());
+  const _0x1c59a6 = await _0x54c8a4.arrayBuffer();
+  return Buffer.from(_0x1c59a6);
+}
+smd({
+  pattern: "imagine4",
+  alias: ["imagin4"],
+  desc: "openjourney-v4",
+  category: "ai",
+  use: "<boy walking on street>",
+  filename: __filename
+}, async (_0x39716c, _0xe79cfd) => {
+  try {
+    let _0x5e79d4 = _0xe79cfd || _0x39716c.reply_text;
+    if (!_0x5e79d4) {
+      return await _0x39716c.reply("*Give Me A Query To Get imagination?*");
+    }
+    const _0x14515f = "" + encodeURIComponent(_0x5e79d4 + " \nNOTE: Make sure to looks like imagination");
+    let _0x5d0b6a = false;
+    try {
+      const _0x37057d = await fetch("" + (_0x5e79d4 + " \nNOTE: Make sure to looks like imagination, make it short and concise, also in english!"));
+      const _0x644785 = await _0x37057d.json();
+      _0x5d0b6a = _0x644785 && _0x644785.status && _0x644785.result ? _0x644785.result : "";
+    } catch (_0x3ecac9) {
+      _0x5d0b6a = false;
+    }
+    try {
+      return await _0x39716c.bot.sendMessage(_0x39716c.chat, {
+        image: {
+          url: _0x14515f
+        },
+        caption: "*[IMAGININATION]:* ```" + _0x5e79d4 + " ```" + (_0x5d0b6a ? "\n\n*[RESPONCE]:* ```" + _0x5d0b6a + "``` \n" : "") + "  \n " + Config.caption + " "
+      });
+    } catch (_0x484392) {
+      console.log("ERROR IN IMAGINE RESPONCE FROM API GURUGPT\n", _0x484392);
+    }
+    if (Config.OPENAI_API_KEY == "" || !Config.OPENAI_API_KEY || !("" + Config.OPENAI_API_KEY).startsWith("sk")) {
+      return _0x39716c.reply("```You Dont Have OPENAI API KEY \nPlease Create OPEN API KEY from Given Link \nhttps://platform.openai.com/account/api-keys\nAnd Set Key in Heroku OPENAI_API_KEY Var```");
+    }
+    return await _0x39716c.bot.sendMessage(_0x39716c.chat, {
+      image: {
+        url: await aiResponce(_0x39716c, "dalle", _0x5e79d4)
+      },
+      caption: "*---Your DALL-E Result---*\n" + Config.caption
+    });
+  } catch (_0x110b5d) {
+    await _0x39716c.error(_0x110b5d + "\n\ncommand: imagine4", _0x110b5d, "*_No responce from Server side, Sorry!!_*");
+  }
+});
+async function Draw(_0x3ab488) {
+  const _0x54c8a4 = await fetch("https://huggingface.co/prompthero/openjourney-v4", {
     method: "POST",
     headers: {
       "content-type": "application/json",
