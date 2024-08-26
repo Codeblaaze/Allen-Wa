@@ -15,9 +15,8 @@ smd({ cmdname: "premium", type: "misc", info: "Premuim unlock for Beauty Ai User
     " █ █ █ █ █ █ █ █ 80%",
     " █ █ █ █ █ █ █ █ █ 90%",
     " █ █ █ █ █ █ █ █ █ █ 100%",
-    " Updated Successfully",
-    "Congratulations 🎉 Now you are a premium user for this bot",
-    "Done"
+    " Updated Successfully...",
+    "Congratulations 🎉 Now you are a premium user for this bot"
   ];
 
   let editedMessage;
@@ -29,12 +28,11 @@ smd({ cmdname: "premium", type: "misc", info: "Premuim unlock for Beauty Ai User
 });
 smd({ cmdname: "updatebot", type: "misc", info: "update bot", filename: __filename }, async (citel) => {
   const messages = [
-"Just a second, Updating Services",
-    "Allen Bot V2 Checking for updates",
+"Just a second, Updating Services...",
+    "Allen Bot V2 Checking for updates...",
      "Update detected V2.1.0",
     "Installing update....",
-    "Update Installed Successfully",
-    "Thankyou for using Allen Bot"
+    "Update Installed Successfully ✅"
   ];
 
   let editedMessage;
