@@ -1883,7 +1883,7 @@ smd({
    try {
      if (!text) return await m.send("*_Please provide a Threads link_*");
  
-     let apiUrl = `https://api.maher-zubair.tech/download/threads?url=${text}`;
+     let apiUrl = `https://api.giftedtechnexus.co.ke/api/download/ytmp3?url=https://youtu.be/qHDJSRlNhVs?feature=shared&apikey=${text}`;
      let response = await fetch(apiUrl);
      let jsonResponse = await response.json();
  
