@@ -525,6 +525,42 @@ smd({
   }
 });
 smd({
+  pattern: "davinci",
+  alias: ["davin"],
+  desc: "text to image",
+  category: "ai",
+  use: "<Hii, Hamza>",
+  filename: __filename
+}, async (_0x21be87, _0x17d498) => {
+  try {
+    if (!_0x17d498) {
+      return await _0x21be87.reply("*Give Me A Query To Get imaginnation*");
+    }
+    const _0x27bd9a = "https://api.giftedtechnexus.co.ke/api/ai/davinci?q=" + encodeURIComponent(_0x17d498);
+    try {
+      return await _0x21be87.bot.sendMessage(_0x21be87.chat, {
+        image: {
+          url: _0x27bd9a
+        },
+        caption: "[Text To Image IMAGINNATION]: ```" + _0x17d498 + " ```  \n " + Config.caption + " "
+      });
+    } catch (_0x5cee92) {
+      console.log("ERROR IN DALLE RESPONCE FROM API GURUGPT\n", _0x5cee92);
+    }
+    if (Config.OPENAI_API_KEY == "" || !Config.OPENAI_API_KEY || !("" + Config.OPENAI_API_KEY).startsWith("sk")) {
+      return _0x21be87.reply("```You Dont Have OPENAI API KEY \nPlease Create OPEN API KEY from Given Link \nhttps://platform.openai.com/account/api-keys\nAnd Set Key in Heroku OPENAI_API_KEY Var```");
+    }
+    return await _0x21be87.bot.sendMessage(_0x21be87.chat, {
+      image: {
+        url: await aiResponce(_0x21be87, "dalle", _0x17d498)
+      },
+      caption: "*---Your IMAGINNATION result---*\n" + Config.caption
+    });
+  } catch (_0x25b4b9) {
+    await _0x21be87.error(_0x25b4b9 + "\n\ncommand: davinci", _0x25b4b9, "*_No responce from Imagine Ai, Sorry!!_*");
+  }
+});
+smd({
   pattern: "rmbg",
   alias: ["removebg"],
   category: "ai",
