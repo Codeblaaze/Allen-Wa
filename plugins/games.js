@@ -38,6 +38,36 @@ Powered by ~ agify.io
   }
 });
 smd({
+  pattern: "akinator",
+  alias: ["akina"],
+  desc: "Guesses the age of a person based on their name.",
+  category: "game",
+  use: "guessage [name]",
+  examples: ["guessage John", "guessage Emily"]
+}, async (message, input) => {
+  const name = input;
+  if (!name) {
+    return message.reply("Please provide a name to guess the age.");
+  }
+  try {
+    const response = await axios.get(`https://api.chiwa.my.id/api/game/akinator?start=true&region=id${name}`);
+    const {
+      count,
+      age
+    } = response.data;
+    const output = `
+*Name:* ${name}
+*Estimated Age:* ${age}
+*Count:* ${count}
+
+Powered by ~ agify.io
+      `;
+    await message.send(output);
+  } catch (error) {
+    await message.error(error + "\n\nCommand: akinator", error, "Failed to guess age.");
+  }
+});
+smd({
   pattern: "guesscountry",
   alias: ["country"],
   desc: "Guesses the likely countries associated with a name.",
@@ -1331,7 +1361,7 @@ smd({
       _0x3fbb59 = true;
     }
     let _0x283c15 = _0x560530 ? _0x5aaad7.game.currentTurn : _0x5aaad7.game.winner;
-    let _0x28a3a4 = "Room ID: " + _0x5aaad7.id + "\n\n" + _0x2929f6.slice(0, 3).join("  ") + "\n" + _0x2929f6.slice(3, 6).join("  ") + "\n" + _0x2929f6.slice(6).join("  ") + "\n" + (_0x3fbb59 ? "@" + _0x283c15.split("@")[0] + " Won ! and got 2000💎 in wallet🤑" : _0x1e00eb ? "Game Tied,well done to both of you players." : "Current Turn " + ["❌", "⭕"][_0x5aaad7.game._currentTurn * 1] + " @" + _0x5aaad7.game.currentTurn.split("@")[0]) + "\n⭕:- @" + _0x5aaad7.game.playerO.split("@")[0] + "\n❌:- @" + _0x5aaad7.game.playerX.split("@")[0];
+    let _0x28a3a4 = "Room ID: " + _0x5aaad7.id + "\n\n" + _0x2929f6.slice(0, 3).join("  ") + "\n" + _0x2929f6.slice(3, 6).join("  ") + "\n" + _0x2929f6.slice(6).join("  ") + "\n" + (_0x3fbb59 ? "@" + _0x283c15.split("@")[0] + " Won ! Congratulations 🎊️" : _0x1e00eb ? "Game Tied,well done to both of you players." : "Current Turn " + ["❌", "⭕"][_0x5aaad7.game._currentTurn * 1] + " @" + _0x5aaad7.game.currentTurn.split("@")[0]) + "\n⭕:- @" + _0x5aaad7.game.playerO.split("@")[0] + "\n❌:- @" + _0x5aaad7.game.playerX.split("@")[0];
     if ((_0x5aaad7.game._currentTurn ^ _0x560530 ? _0x5aaad7.x : _0x5aaad7.o) !== _0x303e73.chat) {
       _0x5aaad7[_0x5aaad7.game._currentTurn ^ _0x560530 ? "x" : "o"] = _0x303e73.chat;
     }
