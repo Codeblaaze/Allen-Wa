@@ -1914,7 +1914,7 @@ smd({
    try {
      if (!text) return await m.send("*_Please provide an Instagram link_*");
  
-     let apiUrl = `https://api.maher-zubair.tech/download/instagram?url=${text}`;
+     let apiUrl = `https://api.agatz.xyz/api/ytmp3?url=${text}`;
      let response = await fetch(apiUrl);
      let jsonResponse = await response.json();
  
