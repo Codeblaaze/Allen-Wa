@@ -346,7 +346,7 @@ smd({
     if (!_0x17d498) {
       return await _0x21be87.reply("*Give Me A Query To Get imaginnation*");
     }
-    const _0x27bd9a = "https://widipe.com/stablediffusion?text=" + encodeURIComponent(_0x17d498);
+    const _0x27bd9a = "https://widipe.com/v1/text2img?text=" + encodeURIComponent(_0x17d498);
     try {
       return await _0x21be87.bot.sendMessage(_0x21be87.chat, {
         image: {
