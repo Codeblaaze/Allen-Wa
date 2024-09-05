@@ -1453,7 +1453,7 @@ smd(
          );
        }
  
-       const apiUrl = `https://aemt.me/download/tiktokdl?url=${encodeURIComponent(
+       const apiUrl = `https://itzpire.com/download/aio?url=${encodeURIComponent(
          tiktokUrl
        )}`;
        const response = await fetchJson(apiUrl);

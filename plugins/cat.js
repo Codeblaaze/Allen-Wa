@@ -10,7 +10,7 @@ smd(
   async (m) => {
     try {
       await m.send(
-        "https://api.thecatapi.com/v1/images/search",
+        "https://itzpire.com/random/photography",
         { caption: "*meoooow!*" },
         "img",
         m
