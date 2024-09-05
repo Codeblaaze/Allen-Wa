@@ -123,36 +123,6 @@ async function aiResponce(_0x109acf, _0xf00650, _0x2728a0 = "") {
 }
 ;
 smd({
-  pattern: "akinator",
-  desc: "chat with an AI",
-  category: "ai",
-  use: "<Hii, Hamza>",
-  filename: __filename
-}, async (_0x5cb388, _0x302ad5) => {
-  try {
-    try {
-      let _0x557719 = _0x302ad5 ? _0x302ad5 : bot.reply_text;
-      if (!_0x557719) {
-        return man.reply("Hello,I'm chatgpt3.5 turbo. How can I assist you today?");
-      }
-      const _0x50c8d3 = await fetch("https://api.chiwa.my.id/api/game/akinator?start=true&region=id" + _0x557719);
-      const _0x14c9d6 = await _0x50c8d3.json();
-      if (_0x14c9d6 && _0x14c9d6.status && _0x14c9d6.result) {
-        return await _0x5cb388.reply(_0x14c9d6.result);
-      }
-    } catch {}
-    if (Config.OPENAI_API_KEY == "" || !Config.OPENAI_API_KEY || !("" + Config.OPENAI_API_KEY).startsWith("sk")) {
-      return _0x5cb388.reply("Hello,I'm chatgpt3.5 turbo. How can I assist you today?");
-    }
-    if (!_0x302ad5) {
-      return _0x5cb388.reply("Hey there! " + _0x5cb388.senderName + ". How are you doing these days?");
-    }
-    return _0x5cb388.send(await aiResponce(_0x5cb388, "akinator", _0x302ad5));
-  } catch (_0x2ef914) {
-    await _0x5cb388.error(_0x2ef914 + "\n\ncommand: gpt", _0x2ef914, "*_no responce from chatgpt, sorry!!_*");
-  }
-});
-smd({
   pattern: "gpt",
   desc: "chat with an AI",
   category: "ai",
