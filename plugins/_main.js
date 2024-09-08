@@ -134,7 +134,7 @@ smd({
     try {
       let _0x557719 = _0x302ad5 ? _0x302ad5 : bot.reply_text;
       if (!_0x557719) {
-        return man.reply("Hello i'm chat gpt4. I'm the most powerful version of chatgpt. Ask me any question.");
+        return man.reply("Hello,i'm chatgpt4. I'm the most powerful version of chatgpt. Ask me any question.");
       }
       const _0x50c8d3 = await fetch("https://widipe.com/gpt4?text=" + _0x557719);
       const _0x14c9d6 = await _0x50c8d3.json();
@@ -143,7 +143,7 @@ smd({
       }
     } catch {}
     if (Config.OPENAI_API_KEY == "" || !Config.OPENAI_API_KEY || !("" + Config.OPENAI_API_KEY).startsWith("sk")) {
-      return _0x5cb388.reply("Hello,I'm chatgpt3.5 turbo. How can I assist you today?");
+      return _0x5cb388.reply("Hello,i'm chatgpt4. I'm the most powerful version of chatgpt. Ask me any question.");
     }
     if (!_0x302ad5) {
       return _0x5cb388.reply("Hey there! " + _0x5cb388.senderName + ". How are you doing these days?");
@@ -164,7 +164,7 @@ smd({
   try {
     let _0x1b0897 = _0x3f3887 ? _0x3f3887 : _0x42b3b8.reply_text;
     if (!_0x1b0897) {
-      return _0x42b3b8.reply("Hello i'm chat gpt4. I'm the most powerful version of chatgpt. Ask me any question.");
+      return _0x42b3b8.reply("Hello,i'm chatgpt4. I'm the most powerful version of chatgpt. Ask me any question.");
     }
     const _0x4c275e = await fetch("https://widipe.com/v2/gpt4?text=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
@@ -188,7 +188,7 @@ smd({
   try {
     let _0x1b0897 = _0x3f3887 ? _0x3f3887 : _0x42b3b8.reply_text;
     if (!_0x1b0897) {
-      return _0x42b3b8.reply("Hello i'm chat gpt 3.5 turbo. How can i assist you today?");
+      return _0x42b3b8.reply("Hello,i'm chatgpt 3.5 turbo. How can i assist you today?");
     }
     const _0x4c275e = await fetch("https://widipe.com/turbo?text=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
