@@ -124,7 +124,8 @@ async function aiResponce(_0x109acf, _0xf00650, _0x2728a0 = "") {
 ;
 smd({
   pattern: "gpt",
-  desc: "chat with an AI",
+  desc: "chat with gpt4",
+  react: "✴️",
   category: "ai",
   use: "<Hii, Hamza>",
   filename: __filename
@@ -133,9 +134,9 @@ smd({
     try {
       let _0x557719 = _0x302ad5 ? _0x302ad5 : bot.reply_text;
       if (!_0x557719) {
-        return man.reply("Hello,I'm chatgpt3.5 turbo. How can I assist you today?");
+        return man.reply("Hello i'm chat gpt4. I'm the most powerful version of chatgpt. Ask me any question.");
       }
-      const _0x50c8d3 = await fetch("https://widipe.com/turbo?text=" + _0x557719);
+      const _0x50c8d3 = await fetch("https://widipe.com/gpt4?text=" + _0x557719);
       const _0x14c9d6 = await _0x50c8d3.json();
       if (_0x14c9d6 && _0x14c9d6.status && _0x14c9d6.result) {
         return await _0x5cb388.reply(_0x14c9d6.result);
@@ -153,7 +154,7 @@ smd({
   }
 });
 smd({
-  pattern: "fgpt",
+  pattern: "gpt2",
   react: "✴️",
   desc: "chat with chatgpt4",
   category: "ai",
@@ -163,31 +164,7 @@ smd({
   try {
     let _0x1b0897 = _0x3f3887 ? _0x3f3887 : _0x42b3b8.reply_text;
     if (!_0x1b0897) {
-      return _0x42b3b8.reply("Hi i'm chat gpt4. I'm the most powerful version of chatgpt. Ask me any question. for example, How can I improve my confidence. give me a full detailed guide");
-    }
-    const _0x4c275e = await fetch("https://widipe.com/gpt4?text=" + _0x1b0897);
-    const _0x4743c3 = await _0x4c275e.json();
-    if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
-      return await _0x42b3b8.send(_0x4743c3.result);
-    } else {
-      await _0x42b3b8.send("*_Error while getting gpt responce!!_*");
-    }
-  } catch (_0x70fc81) {
-    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: fgpt", _0x70fc81, "*_no responce from chatgpt, sorry!!_*");
-  }
-});
-smd({
-  pattern: "fgpt2",
-  react: "✴️",
-  desc: "chat with chatgpt4",
-  category: "ai",
-  use: "<query>",
-  filename: __filename
-}, async (_0x42b3b8, _0x3f3887) => {
-  try {
-    let _0x1b0897 = _0x3f3887 ? _0x3f3887 : _0x42b3b8.reply_text;
-    if (!_0x1b0897) {
-      return _0x42b3b8.reply("Hi i'm chat gpt4. I'm the most powerful version of chatgpt. Ask me any question. for example, _how to make Vanilla Latte?_");
+      return _0x42b3b8.reply("Hello i'm chat gpt4. I'm the most powerful version of chatgpt. Ask me any question.");
     }
     const _0x4c275e = await fetch("https://widipe.com/v2/gpt4?text=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
@@ -197,7 +174,31 @@ smd({
       await _0x42b3b8.send("*_Error while getting gpt responce!!_*");
     }
   } catch (_0x70fc81) {
-    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: fgpt2", _0x70fc81, "*_no responce from chatgpt2, sorry!!_*");
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: gpt2", _0x70fc81, "*_no responce from chatgpt, sorry!!_*");
+  }
+});
+smd({
+  pattern: "fgpt",
+  react: "✳️",
+  desc: "chat with chatgpt3.5",
+  category: "ai",
+  use: "<query>",
+  filename: __filename
+}, async (_0x42b3b8, _0x3f3887) => {
+  try {
+    let _0x1b0897 = _0x3f3887 ? _0x3f3887 : _0x42b3b8.reply_text;
+    if (!_0x1b0897) {
+      return _0x42b3b8.reply("Hello i'm chat gpt 3.5 turbo. How can i assist you today?");
+    }
+    const _0x4c275e = await fetch("https://widipe.com/turbo?text=" + _0x1b0897);
+    const _0x4743c3 = await _0x4c275e.json();
+    if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
+      return await _0x42b3b8.send(_0x4743c3.result);
+    } else {
+      await _0x42b3b8.send("*_Error while getting gpt responce!!_*");
+    }
+  } catch (_0x70fc81) {
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: fgpt", _0x70fc81, "*_no responce from chatgpt2, sorry!!_*");
   }
 });
 smd({
