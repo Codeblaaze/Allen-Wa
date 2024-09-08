@@ -226,9 +226,9 @@ smd({
   }
 });
 smd({
-  pattern: "gemini",
+  pattern: "bard",
   react:"🌍",
-  desc: "Chat with Google Gemini",
+  desc: "Chat with Google bard",
   category: "ai",
   use: "<query>",
   filename: __filename
@@ -236,9 +236,9 @@ smd({
   try {
     let _0x1b0897 = _0x3f3887 ? _0x3f3887 : _0x42b3b8.reply_text;
     if (!_0x1b0897) {
-      return _0x42b3b8.reply("Hey, I'm Gemini by Google, Ask me any Question! How can I help you today?");
+      return _0x42b3b8.reply("Hey, I'm Bard by Google, Ask me any Question! How can I help you today?");
     }
-    const _0x4c275e = await fetch("https://widipe.com/gemini?text=" + _0x1b0897);
+    const _0x4c275e = await fetch("https://widipe.com/bard?text=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
@@ -246,7 +246,7 @@ smd({
       await _0x42b3b8.send("*_Error while getting chat responce!!_*");
     }
   } catch (_0x70fc81) {
-    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: gemini", _0x70fc81, "*_no responce from gemini, sorry!!_*");
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: bard", _0x70fc81, "*_no responce from bard, sorry!!_*");
   }
 });
 smd({
