@@ -250,6 +250,30 @@ smd({
   }
 });
 smd({
+  pattern: "liama",
+  react:"🔅",
+  desc: "Chat with liama",
+  category: "ai",
+  use: "<query>",
+  filename: __filename
+}, async (_0x42b3b8, _0x3f3887) => {
+  try {
+    let _0x1b0897 = _0x3f3887 ? _0x3f3887 : _0x42b3b8.reply_text;
+    if (!_0x1b0897) {
+      return _0x42b3b8.reply("Hey, I'm Liama by Meta, Ask me any Question! How can I help you today?");
+    }
+    const _0x4c275e = await fetch("https://widipe.com/blackbox?text=" + _0x1b0897);
+    const _0x4743c3 = await _0x4c275e.json();
+    if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
+      return await _0x42b3b8.send(_0x4743c3.result);
+    } else {
+      await _0x42b3b8.send("*_Error while getting chat responce!!_*");
+    }
+  } catch (_0x70fc81) {
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: liama", _0x70fc81, "*_no responce from Liama, sorry!!_*");
+  }
+});
+smd({
   pattern: "chat",
   react:"✳️",
   desc: "Chat with Allen",
