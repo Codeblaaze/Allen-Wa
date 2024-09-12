@@ -30,6 +30,33 @@ smd(
   }
 );
 smd(
+  {
+    pattern: "thai",
+    category: "wallpaper",
+    filename: __filename,
+    desc: "Get a Thai girl.",
+  },
+  async (m) => {
+    try {
+      let apiUrl = "https://widipe.com/thailand";
+      let response = await fetch(apiUrl);
+      let jsonResponse = await response.json();
+
+      if (jsonResponse.status === 200) {
+        await m.send(jsonResponse.url, { caption: Config.caption }, "image", m);
+      } else {
+        await m.send("*_Request not be preceed!!_*");
+      }
+    } catch (error) {
+      await m.error(
+        error + "\n\ncommand: thai",
+        error,
+        "*_No responce from API, Sorry!!_*"
+      );
+    }
+  }
+);
+smd(
     {
       pattern: "bike",
       category: "wallpaper",
