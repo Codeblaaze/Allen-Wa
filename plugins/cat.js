@@ -20,3 +20,26 @@ smd(
     }
   }
 );
+const { smd } = require("../lib");
+
+smd(
+  {
+    cmdname: "china",
+    desc: "Send Images of randome Chinese girl!",
+    type: "misc",
+    filename: __filename,
+  },
+  async (m) => {
+    try {
+      await m.send(
+        "https://widipe.com/china",
+        { caption: "*Hello...*" },
+        "img",
+        m
+      );
+    } catch (e) {
+      m.error(`${e}\n\nCommand: china`, e, false);
+    }
+  }
+);
+
