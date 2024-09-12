@@ -26,7 +26,7 @@ smd(
   {
     cmdname: "china",
     desc: "Send Images of randome Chinese girl!",
-    type: "misc",
+    type: "fun",
     filename: __filename,
   },
   async (m) => {
