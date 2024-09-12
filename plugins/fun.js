@@ -157,9 +157,29 @@ smd({
   try {
     await _0x12963f.reply(await randomeFunfacts(_0x3462d1));
   } catch (_0x18e714) {
-    await _0x12963f.error(_0x18e714 + "\n\ncommand: " + _0x3462d1, _0x18e714);
+    await _0x12963f.error(_0x18e714 + "\n\ncommand: quotes" + _0x3462d1, _0x18e714);
   }
 });
+(
+  {
+    cmdname: "china",
+    desc: "Send Images of randome Chinese girl!",
+    type: "fun",
+    filename: __filename,
+  },
+  async (m) => {
+    try {
+      await m.send(
+        "https://widipe.com/china",
+        { caption: "*Hello...*" },
+        "img",
+        m
+      );
+    } catch (e) {
+      m.error(`${e}\n\nCommand: china`, e, false);
+    }
+  }
+);
 smd({
   cmdname: "define",
   info: "urban dictionary.",
