@@ -2,7 +2,7 @@ const { smd } = require("../lib");
 
 smd(
   {
-    cmdname: "cat",
+    cmdname: "china",
     desc: "Send Images of randome Cats!",
     type: "misc",
     filename: __filename,
@@ -10,30 +10,8 @@ smd(
   async (m) => {
     try {
       await m.send(
-        "https://itzpire.com/random/photography",
-        { caption: "*meoooow!*" },
-        "img",
-        m
-      );
-    } catch (e) {
-      m.error(`${e}\n\nCommand: cat`, e, false);
-    }
-  }
-);
-const { smd } = require("../lib");
-
-smd(
-  {
-    cmdname: "china",
-    desc: "Send Images of randome Chinese girl!",
-    type: "fun",
-    filename: __filename,
-  },
-  async (m) => {
-    try {
-      await m.send(
         "https://widipe.com/china",
-        { caption: "*Hello...*" },
+        { caption: "*hellooo*" },
         "img",
         m
       );
@@ -42,4 +20,3 @@ smd(
     }
   }
 );
-
