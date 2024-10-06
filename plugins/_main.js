@@ -136,7 +136,7 @@ smd({
       if (!_0x557719) {
         return man.reply("Hello,i'm chatgpt4. I'm the most powerful version of chatgpt. Ask me any question.");
       }
-      const _0x50c8d3 = await fetch("https://widipe.com/gpt4?text=" + _0x557719);
+      const _0x50c8d3 = await fetch("https://itzpire.com/ai/gpt?model=gpt-4&q=" + _0x557719);
       const _0x14c9d6 = await _0x50c8d3.json();
       if (_0x14c9d6 && _0x14c9d6.status && _0x14c9d6.result) {
         return await _0x5cb388.reply(_0x14c9d6.result);
@@ -166,7 +166,7 @@ smd({
     if (!_0x1b0897) {
       return _0x42b3b8.reply("Hello,i'm chatgpt4. I'm the most powerful version of chatgpt. Ask me any question.");
     }
-    const _0x4c275e = await fetch("https://widipe.com/v2/gpt4?text=" + _0x1b0897);
+    const _0x4c275e = await fetch("https://itzpire.com/ai/gpt?model=gpt-4&q=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
@@ -190,7 +190,7 @@ smd({
     if (!_0x1b0897) {
       return _0x42b3b8.reply("Hello,i'm chatgpt 3.5 turbo. How can i assist you today?");
     }
-    const _0x4c275e = await fetch("https://widipe.com/turbo?text=" + _0x1b0897);
+    const _0x4c275e = await fetch("https://itzpire.com/ai/gpt?model=gpt-3.5-turbo&q=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
@@ -250,9 +250,9 @@ smd({
   }
 });
 smd({
-  pattern: "gemini",
+  pattern: "curie",
   react:"🌍",
-  desc: "Chat with Google Gemini",
+  desc: "Chat with Curie",
   category: "ai",
   use: "<query>",
   filename: __filename
@@ -262,7 +262,7 @@ smd({
     if (!_0x1b0897) {
       return _0x42b3b8.reply("Hey, I'm Gemini by Google, Ask me any Question! How can I help you today?");
     }
-    const _0x4c275e = await fetch("https://api.neoxr.my.id/api/chat?id=268827&msg=" + _0x1b0897);
+    const _0x4c275e = await fetch("https://itzpire.com/ai/gpt?model=curie&q=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
@@ -270,7 +270,7 @@ smd({
       await _0x42b3b8.send("*_Error while getting chat responce!!_*");
     }
   } catch (_0x70fc81) {
-    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: gemini", _0x70fc81, "*_no responce from bard, sorry!!_*");
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: curie", _0x70fc81, "*_no responce from bard, sorry!!_*");
   }
 });
 smd({
