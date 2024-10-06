@@ -124,39 +124,8 @@ async function aiResponce(_0x109acf, _0xf00650, _0x2728a0 = "") {
 ;
 smd({
   pattern: "gpt",
-  desc: "chat with gpt4",
-  react: "✴️",
-  category: "ai",
-  use: "<Hii, Hamza>",
-  filename: __filename
-}, async (_0x5cb388, _0x302ad5) => {
-  try {
-    try {
-      let _0x557719 = _0x302ad5 ? _0x302ad5 : bot.reply_text;
-      if (!_0x557719) {
-        return man.reply("Hello,i'm chatgpt4. I'm the most powerful version of chatgpt. Ask me any question.");
-      }
-      const _0x50c8d3 = await fetch("https://itzpire.com/ai/gpt?model=gpt-4&q=" + _0x557719);
-      const _0x14c9d6 = await _0x50c8d3.json();
-      if (_0x14c9d6 && _0x14c9d6.status && _0x14c9d6.result) {
-        return await _0x5cb388.reply(_0x14c9d6.result);
-      }
-    } catch {}
-    if (Config.OPENAI_API_KEY == "" || !Config.OPENAI_API_KEY || !("" + Config.OPENAI_API_KEY).startsWith("sk")) {
-      return _0x5cb388.reply("Hello,i'm chatgpt4. I'm the most powerful version of chatgpt. Ask me any question.");
-    }
-    if (!_0x302ad5) {
-      return _0x5cb388.reply("Hey there! " + _0x5cb388.senderName + ". How are you doing these days?");
-    }
-    return _0x5cb388.send(await aiResponce(_0x5cb388, "gpt", _0x302ad5));
-  } catch (_0x2ef914) {
-    await _0x5cb388.error(_0x2ef914 + "\n\ncommand: gpt", _0x2ef914, "*_no responce from chatgpt, sorry!!_*");
-  }
-});
-smd({
-  pattern: "gpt2",
-  react: "✴️",
-  desc: "chat with chatgpt4",
+  react:"✴️",
+  desc: "Chat with chatgpt4",
   category: "ai",
   use: "<query>",
   filename: __filename
@@ -171,16 +140,16 @@ smd({
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
     } else {
-      await _0x42b3b8.send("*_Error while getting gpt responce!!_*");
+      await _0x42b3b8.send("*_Error while getting chat responce!!_*");
     }
   } catch (_0x70fc81) {
-    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: gpt2", _0x70fc81, "*_no responce from chatgpt, sorry!!_*");
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: gpt", _0x70fc81, "*_no responce from chatgpt, sorry!!_*");
   }
 });
 smd({
-  pattern: "fgpt",
-  react: "✳️",
-  desc: "chat with chatgpt3.5",
+  pattern: "gpt2",
+  react:"✴️",
+  desc: "Chat with chatgpt4",
   category: "ai",
   use: "<query>",
   filename: __filename
@@ -188,17 +157,41 @@ smd({
   try {
     let _0x1b0897 = _0x3f3887 ? _0x3f3887 : _0x42b3b8.reply_text;
     if (!_0x1b0897) {
-      return _0x42b3b8.reply("Hello,i'm chatgpt 3.5 turbo. How can i assist you today?");
+      return _0x42b3b8.reply("Hello,i'm chatgpt4. I'm the most powerful version of chatgpt. Ask me any question.");
+    }
+    const _0x4c275e = await fetch("https://itzpire.com/ai/gpt?model=gpt-4&q=" + _0x1b0897);
+    const _0x4743c3 = await _0x4c275e.json();
+    if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
+      return await _0x42b3b8.send(_0x4743c3.result);
+    } else {
+      await _0x42b3b8.send("*_Error while getting chat responce!!_*");
+    }
+  } catch (_0x70fc81) {
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: gpt2", _0x70fc81, "*_no responce from chatgpt, sorry!!_*");
+  }
+});
+smd({
+  pattern: "fgpt",
+  react:"✳️",
+  desc: "Chat with chatgpt3.5",
+  category: "ai",
+  use: "<query>",
+  filename: __filename
+}, async (_0x42b3b8, _0x3f3887) => {
+  try {
+    let _0x1b0897 = _0x3f3887 ? _0x3f3887 : _0x42b3b8.reply_text;
+    if (!_0x1b0897) {
+      return _0x42b3b8.reply("Hello,i'm chatgpt3.5 . How can i help you today?");
     }
     const _0x4c275e = await fetch("https://itzpire.com/ai/gpt?model=gpt-3.5-turbo&q=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
     } else {
-      await _0x42b3b8.send("*_Error while getting gpt responce!!_*");
+      await _0x42b3b8.send("*_Error while getting chat responce!!_*");
     }
   } catch (_0x70fc81) {
-    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: fgpt", _0x70fc81, "*_no responce from chatgpt2, sorry!!_*");
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: fgpt", _0x70fc81, "*_no responce from chatgpt, sorry!!_*");
   }
 });
 smd({
