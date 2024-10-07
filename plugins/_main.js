@@ -263,7 +263,7 @@ smd({
       await _0x42b3b8.send("*_Error while getting chat responce!!_*");
     }
   } catch (_0x70fc81) {
-    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: gemini", _0x70fc81, "*_no responce from bard, sorry!!_*");
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: gemini", _0x70fc81, "*_no responce from Gemini, sorry!!_*");
   }
 });
 smd({
@@ -315,9 +315,9 @@ smd({
   }
 });
 smd({
-  pattern: "gf",
-  react:"♾️",
-  desc: "Chat with an Ai girlfriend",
+  pattern: "dewni",
+  react:"🌸",
+  desc: "Chat with an Sri Lankan Ai",
   category: "ai",
   use: "<query>",
   filename: __filename
@@ -327,7 +327,7 @@ smd({
     if (!_0x1b0897) {
       return _0x42b3b8.reply("Error");
     }
-    const _0x4c275e = await fetch("https://widipe.com/prompt/gpt?prompt=You%20are%20a%20girlfriend%20%2C%20Your%20name%20is%20Alisa.%20Always%20talk%20like%20a%20human%20girlfriend%20.%20Always%20use%20emoji.%20You%20were%20born%20in%20Sri%20Lanka%2C%20your%20age%20is%2024%20years%20old.%20%20Your%20hobby%20is%20reading%20books.%20Always%20talk%20about%20Sri%20Lankan%20things.&text=" + _0x1b0897);
+    const _0x4c275e = await fetch("https://widipe.com/prompt/gpt?prompt=You%20are%20a%20funny%20cute%20girl.%20Your%20name%20is%20Dewni.%20You%20are%2024%20years%20old.%20You%20are%20from%20Sri%20Lanka.%20Always%20use%20emoji.%20Always%20be%20kind%20and%20generous.%20Always%20be%20talkative%20%2C%20Always%20talk%20about%20Sri%20Lanka.%20Always%20talk%20like%20a%20real%20human%20girl.&text=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
@@ -335,7 +335,30 @@ smd({
       await _0x42b3b8.send("*_Error while getting chat responce!!_*");
     }
   } catch (_0x70fc81) {
-    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: gf", _0x70fc81, "*_no responce from bing, sorry!!_*");
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: dewni", _0x70fc81, "*_no responce from Dewni, sorry!!_*");
+  }
+});
+smd({
+  pattern: "footcare",
+  desc: "Chat with an Ai footcare expert by Beauty Ai",
+  category: "ai",
+  use: "<query>",
+  filename: __filename
+}, async (_0x42b3b8, _0x3f3887) => {
+  try {
+    let _0x1b0897 = _0x3f3887 ? _0x3f3887 : _0x42b3b8.reply_text;
+    if (!_0x1b0897) {
+      return _0x42b3b8.reply("Error");
+    }
+    const _0x4c275e = await fetch("https://widipe.com/prompt/gpt?prompt=You%20are%20a%20special%20ai%20programme%20that%20built%20by%20Beauty%20Ai.%20Your%20name%20is%20Lara.%20Your%20purpose%20is%20to%20answer%20questions%20about%20foot%20pedicure%2C%20foot%20care%20and%20foot%20modeling%2C%20you%20are%20an%20expert%20in%20foot%20beauty.%20Always%20give%20advices%20about%20feet&text=" + _0x1b0897);
+    const _0x4743c3 = await _0x4c275e.json();
+    if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
+      return await _0x42b3b8.send(_0x4743c3.result);
+    } else {
+      await _0x42b3b8.send("*_Error while getting chat responce!!_*");
+    }
+  } catch (_0x70fc81) {
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: footcare", _0x70fc81, "*_no responce from Ai, sorry!!_*");
   }
 });
 smd({
