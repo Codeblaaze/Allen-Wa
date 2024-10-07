@@ -135,7 +135,7 @@ smd({
     if (!_0x1b0897) {
       return _0x42b3b8.reply("Hello,i'm chatgpt4. I'm the most powerful version of chatgpt. Ask me any question.");
     }
-    const _0x4c275e = await fetch("https://itzpire.com/ai/gpt?model=gpt-4&q=" + _0x1b0897);
+    const _0x4c275e = await fetch("https://widipe.com/gpt4?text=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
@@ -159,7 +159,7 @@ smd({
     if (!_0x1b0897) {
       return _0x42b3b8.reply("Hello,i'm chatgpt4. I'm the most powerful version of chatgpt. Ask me any question.");
     }
-    const _0x4c275e = await fetch("https://itzpire.com/ai/gpt?model=gpt-4&q=" + _0x1b0897);
+    const _0x4c275e = await fetch("https://widipe.com/v2/gpt4?text=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
@@ -183,7 +183,7 @@ smd({
     if (!_0x1b0897) {
       return _0x42b3b8.reply("Hello,i'm chatgpt3.5 . How can i help you today?");
     }
-    const _0x4c275e = await fetch("https://itzpire.com/ai/gpt?model=gpt-3.5-turbo&q=" + _0x1b0897);
+    const _0x4c275e = await fetch("https://widipe.com/turbo?text=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
@@ -243,9 +243,9 @@ smd({
   }
 });
 smd({
-  pattern: "curie",
+  pattern: "gemini",
   react:"🌍",
-  desc: "Chat with Curie",
+  desc: "Chat with Gemini",
   category: "ai",
   use: "<query>",
   filename: __filename
@@ -255,7 +255,7 @@ smd({
     if (!_0x1b0897) {
       return _0x42b3b8.reply("Hey, I'm Gemini by Google, Ask me any Question! How can I help you today?");
     }
-    const _0x4c275e = await fetch("https://itzpire.com/ai/gpt?model=curie&q=" + _0x1b0897);
+    const _0x4c275e = await fetch("https://widipe.com/gemini?text=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
@@ -263,7 +263,7 @@ smd({
       await _0x42b3b8.send("*_Error while getting chat responce!!_*");
     }
   } catch (_0x70fc81) {
-    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: curie", _0x70fc81, "*_no responce from bard, sorry!!_*");
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: gemini", _0x70fc81, "*_no responce from bard, sorry!!_*");
   }
 });
 smd({
@@ -315,9 +315,9 @@ smd({
   }
 });
 smd({
-  pattern: "liama",
+  pattern: "gf",
   react:"♾️",
-  desc: "Chat with Liama",
+  desc: "Chat with an Ai girlfriend",
   category: "ai",
   use: "<query>",
   filename: __filename
@@ -325,9 +325,9 @@ smd({
   try {
     let _0x1b0897 = _0x3f3887 ? _0x3f3887 : _0x42b3b8.reply_text;
     if (!_0x1b0897) {
-      return _0x42b3b8.reply("Hey, I'm Liama by Meta, Ask me any Question! How can I help you today?");
+      return _0x42b3b8.reply("Error");
     }
-    const _0x4c275e = await fetch("https://itzpire.com/ai/blackbox-ai?q=" + _0x1b0897);
+    const _0x4c275e = await fetch("https://widipe.com/prompt/gpt?prompt=You%20are%20a%20girlfriend%20%2C%20Your%20name%20is%20Alisa.%20Always%20talk%20like%20a%20human%20girlfriend%20.%20Always%20use%20emoji.%20You%20were%20born%20in%20Sri%20Lanka%2C%20your%20age%20is%2024%20years%20old.%20%20Your%20hobby%20is%20reading%20books.%20Always%20talk%20about%20Sri%20Lankan%20things.&text=" + _0x1b0897);
     const _0x4743c3 = await _0x4c275e.json();
     if (_0x4743c3 && _0x4743c3.status && _0x4743c3.result) {
       return await _0x42b3b8.send(_0x4743c3.result);
@@ -335,7 +335,7 @@ smd({
       await _0x42b3b8.send("*_Error while getting chat responce!!_*");
     }
   } catch (_0x70fc81) {
-    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: liama", _0x70fc81, "*_no responce from bing, sorry!!_*");
+    await _0x42b3b8.error(_0x70fc81 + "\n\ncommand: gf", _0x70fc81, "*_no responce from bing, sorry!!_*");
   }
 });
 smd({
