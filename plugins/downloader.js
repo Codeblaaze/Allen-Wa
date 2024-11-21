@@ -56,7 +56,7 @@ const {
 
       const {
         photoUrl,
-        username,
+        username: igUsername,
         fullname,
         postsCount,
         followers,
@@ -67,7 +67,7 @@ const {
       const caption = `
 *Instagram User Information*
 
-*Username:* ${username}
+*Username:* ${igUsername}
 *Full Name:* ${fullname}
 *Bio:* ${bio || "NO BIO"}
 
@@ -79,7 +79,7 @@ const {
 \t*WASI IG STALKER*
 `;
 
-      await m.bot.sendFromUrl(m.from, photo_profile, caption, m, {}, "image");
+      await m.bot.sendFromUrl(m.from, photoUrl, caption, m, {}, "image");
     } catch (e) {
       await m.error(`${e}\n\ncommand: igstalk`, e);
     }
