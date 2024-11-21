@@ -56,9 +56,9 @@ const {
 
       const {
         photoUrl,
-        username: igUsername,
+        username,
         fullname,
-        posts,
+        postsCount,
         followers,
         following,
         bio,
@@ -71,7 +71,8 @@ const {
 *Full Name:* ${fullname}
 *Bio:* ${bio || "NO BIO"}
 
-*Posts:* ${posts}
+*Posts:* ${postsCount}
+*photo :* ${photoUrl}
 *Followers:* ${followers}
 *Following:* ${following}
 
