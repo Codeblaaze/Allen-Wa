@@ -55,13 +55,12 @@ const {
       }
 
       const {
-        photo_profile,
+        photoUrl,
         username: igUsername,
         fullname,
-        postsCount,
+        posts,
         followers,
         following,
-        photoUrl
         bio,
       } = data.result;
 
@@ -72,8 +71,7 @@ const {
 *Full Name:* ${fullname}
 *Bio:* ${bio || "NO BIO"}
 
-*Posts:* ${postsCount}
-*photoUrl:* ${photoUrl}
+*Posts:* ${posts}
 *Followers:* ${followers}
 *Following:* ${following}
 
