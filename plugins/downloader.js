@@ -67,7 +67,7 @@ const {
       const caption = `
 *Instagram User Information*
 
-*Username:* ${igUsername}
+*Username:* ${username}
 *Full Name:* ${fullname}
 *Bio:* ${bio || "NO BIO"}
 
