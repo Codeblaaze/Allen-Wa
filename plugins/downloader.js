@@ -37,7 +37,7 @@ const {
         return await m.send("*_Please provide an Instagram username!_*");
       }
 
-      const apiUrl = `https://api.maher-zubair.tech/stalk/instagram?q=${encodeURIComponent(
+      const apiUrl = `https://aemt.uk.to/download/igstalk?username=${encodeURIComponent(
         username
       )}`;
       const response = await fetch(apiUrl);
@@ -58,9 +58,10 @@ const {
         photo_profile,
         username: igUsername,
         fullname,
-        posts,
+        postsCount,
         followers,
         following,
+        photoUrl
         bio,
       } = data.result;
 
@@ -71,7 +72,8 @@ const {
 *Full Name:* ${fullname}
 *Bio:* ${bio || "NO BIO"}
 
-*Posts:* ${posts}
+*Posts:* ${postsCount}
+*photoUrl:* ${photoUrl}
 *Followers:* ${followers}
 *Following:* ${following}
 
