@@ -1411,7 +1411,7 @@ smd(
          );
        }
  
-       const apiUrl = "https://aemt.uk.to/download/ttdl?url=";
+       const apiUrl = "https://aemt.uk.to/download/v2/ttdl?url=";
        const response = await fetch(`${apiUrl}?url=${tiktokUrl}`);
        const data = await response.json();
  
@@ -1453,7 +1453,7 @@ smd(
          );
        }
  
-       const apiUrl = `https://itzpire.com/download/aio?url=${encodeURIComponent(
+       const apiUrl = `https://aemt.uk.to/download/ytdl?url==${encodeURIComponent(
          tiktokUrl
        )}`;
        const response = await fetchJson(apiUrl);
