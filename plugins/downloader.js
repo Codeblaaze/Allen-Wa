@@ -1411,7 +1411,7 @@ smd(
          );
        }
  
-       const apiUrl = "https://aemt.me/download/tiktokdl?url=";
+       const apiUrl = "https://aemt.uk.to/download/ttdl?url=";
        const response = await fetch(`${apiUrl}?url=${tiktokUrl}`);
        const data = await response.json();
  
