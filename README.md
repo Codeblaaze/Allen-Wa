@@ -1,3 +1,3 @@
 # Allen-Wa
 
-I did not create anything . All the Credits goes to the original owners
+Allen Bot is a multi funtional automated Ai powered programme that runs on whatsapp.
